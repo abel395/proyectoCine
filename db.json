@@ -1,0 +1,14 @@
+{
+  "usarioLogado": [
+    {
+      "id": 1,
+      "nombre": "Abel",
+      "apellido": "Priego Borrego"
+    },
+    {
+      "id": 2,
+      "nombre": "Fernando",
+      "apellido": "Alonso"
+    }
+  ]
+}

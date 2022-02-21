@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <input type="text" class="form-control" name="filtro" placeholder="Buscar..." [(ngModel)]="filtroBusqueda">
+          </div>
+        </div>
+      </div>
+</div>
+<app-razas [filtro]="filtroBusqueda"></app-razas>

@@ -1,0 +1,25 @@
+<h4>Razas</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                        <th class="col-1">ID</th> <th class="col-3">Nombre</th> <th class="col-2 text-center">Peso</th> <th class="col-2 text-center">Altura</th> <th class="col-2 text-center">Esperanza Vida</th><th class="col-2 text-center">Acciones</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let r of razas | filtroPeliculas:filtroListado | paginate: { itemsPerPage: 10, currentPage: page }"> 
+                        <td>{{r.id}}</td> 
+                        <td>{{r.name}}</td> 
+                        <td class="text-center">{{r.weight.metric}} kg</td>
+                        <td class="text-center">{{r.height.metric}} cm</td> 
+                        <td class="text-center">{{r.life_span}}</td> 
+                        <td class="text-center"> 
+                            <button  class="btn btn-primary">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+        </div>
+    </div>
+</div>
